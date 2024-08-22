@@ -1,3 +1,4 @@
+import { Montserrat } from "next/font/google";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -13,6 +14,20 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      colors: {
+        'primary': {
+          100: 'var(--primary-btn)',
+          500: 'var(--primary-default)',
+          600: 'var(--primary-hover)',
+          700: 'var(--primary-pressed)'
+        },
+        'secondary': {
+          300: 'var(--secondary-desabled)'
+        }
+      },
+      fontFamily: {
+        'fontMontserrat': ['Montserrat', 'sans-serif']
+      }
     },
   },
   plugins: [],
