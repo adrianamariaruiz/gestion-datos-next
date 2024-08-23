@@ -13,12 +13,12 @@ const PaymentMethod = () => {
   }
 
   return (
-    <div className="px-4 py-2">
+    <div className="px-4 pt-2">
       <h2 className="pb-4 font-bold">Método de pago</h2>
 
       <div>
         <form action="" >
-          <div className="flex flex-col justify-center gap-2">
+          <div className="flex flex-col justify-center gap-2 accent-black">
 
             <details 
               open={isOpen}
@@ -27,12 +27,13 @@ const PaymentMethod = () => {
               }`}
             >
               <summary className="list-none w-full">
-                <div className="w-full flex gap-2 items-center justify-between">
+                <div className="w-full flex gap-2 items-center justify-between ">
                   <label htmlFor="card" className="gap-2 flex items-center">
                     <input type="radio" id="card" name="payment-method"
                       onClick={() => setIsOpen(!isOpen)}
                       onChange={handleRadioChange}
                       checked={select === "card" || select === "card-end" || select === "other-card"}
+                    
                     />
                     Tarjeta Bancaria
                     <Image
@@ -116,10 +117,28 @@ const PaymentMethod = () => {
                 <span className="text-secondary-300 text-xs">No instantáneo</span>
               </div>
             </div>
-
           </div>
 
+          <div className="flex flex-col my-6 gap-4">
+            <button 
+              className={`w-full font-semibold py-3 px-3 rounded ${
+                select.length === 0  ? "bg-primary-100 text-black" : "bg-primary-500 text-white"
+              }`}
+              disabled={select.length === 0}
+            >Recargar Cuenta</button>
+            
+            <div className="flex text-xs gap-4">
+              <Image
+                  alt="question-icon"
+                  src="/images/icons/Security24px.png"
+                  width={24}
+                  height={24}
+                  className="h-6 w-6"
+              />
+              <p>Todos los pagos en Dev Talenty son 100% seguros. Web certificada por Confianza Online.</p>  
+            </div>  
 
+          </div>
         </form>
       </div>
     </div>

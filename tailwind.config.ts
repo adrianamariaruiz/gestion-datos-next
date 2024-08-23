@@ -27,6 +27,9 @@ const config: Config = {
       },
       fontFamily: {
         'fontMontserrat': ['Montserrat', 'sans-serif']
+      },
+      boxShadow: {
+        'top': '0px -8px 15px -15px rgba(0,0,0,0.2)'
       }
     },
   },

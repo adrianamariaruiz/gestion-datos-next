@@ -15,17 +15,21 @@ const SelectImport = () => {
     setInputValue(opt.toString())
   }
 
+  const handleSubmit = () => {
+    console.log('funciona')
+  }
+
   console.log(inputValue)
 
   return (
     <div className="p-4 mt-4">
       <p className="font-bold mb-4">Selecciona Importe a Añadir:</p>
       
-      <form action="" className="flex flex-col relative">
+      <form onSubmit={handleSubmit} className="flex flex-col relative">
         <input 
           type="text" 
           placeholder="Importe (€)"
-          className="border-2 border-black rounded-md px-4 py-4 text-base"
+          className="border-2 border-black rounded-md px-4 py-4 text-base focus:outline-none focus:border-primary-500 focus:ring-0 focus:ring-primary-500"
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
         />
@@ -38,6 +42,7 @@ const SelectImport = () => {
         {
           optionsImport.map( opt => (
             <button 
+              type="submit"
               key={opt} 
               onClick={() => handleButtonClick(opt)}
               className={`w-full h-10 px-3 py-1 rounded-md ${
