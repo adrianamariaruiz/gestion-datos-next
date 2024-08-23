@@ -81,5 +81,3 @@ const Navbar = () => {
 }
 
 export default Navbar
-
-// public\images\icons\Back24px.png
