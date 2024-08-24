@@ -1,15 +1,25 @@
 'use client'
 
 import Image from "next/image"
+import { useRouter } from "next/navigation";
 import { useState } from "react";
+import Button from "./Button";
 
 const PaymentMethod = () => {
   const [isOpen, setIsOpen] = useState<boolean>(true);
   const [select, setSelect] = useState<string>("card-end");
 
+  const router = useRouter();
+
   const handleRadioChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     console.log(e.target.id)
     setSelect(e.target.id)
+  }
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    console.log(select)
+    router.push('/results')
   }
 
   return (
@@ -17,7 +27,7 @@ const PaymentMethod = () => {
       <h2 className="pb-4 font-bold">Método de pago</h2>
 
       <div>
-        <form action="" >
+        <form onSubmit={handleSubmit} >
           <div className="flex flex-col justify-center gap-2 accent-black">
 
             <details 
@@ -120,12 +130,13 @@ const PaymentMethod = () => {
           </div>
 
           <div className="flex flex-col my-6 gap-4">
-            <button 
-              className={`w-full font-semibold py-3 px-3 rounded ${
-                select.length === 0  ? "bg-primary-100 text-black" : "bg-primary-500 text-white"
-              }`}
+            <Button
+              className={`${select.length === 0  ? "bg-primary-100 text-black" : "bg-primary-500 text-white"}`}
               disabled={select.length === 0}
-            >Recargar Cuenta</button>
+              type="submit"
+            >
+              Recargar Cuenta
+            </Button>
             
             <div className="flex text-xs gap-4">
               <Image
