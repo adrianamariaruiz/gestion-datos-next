@@ -11,7 +11,7 @@ interface Prop {
 
 const Button = ({children, disabled, onClick, type, className}: Prop) => {
 
-  const btnStyles = `w-full font-semibold py-3 px-3 rounded ${className}`
+  const btnStyles = `w-full font-semibold py-3 px-3 rounded hover:bg-primary-700 ${className}`
 
   return (
     <button

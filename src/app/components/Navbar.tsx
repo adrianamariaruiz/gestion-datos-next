@@ -3,7 +3,7 @@ import Link from "next/link"
 
 const Navbar = () => {
   return (
-    <div className="z-50 fixed top-0 left-0 bg-primary-500 flex justify-between items-center h-14 w-full text-white lg:h-16">
+    <nav className="z-50 fixed top-0 left-0 bg-primary-500 flex justify-between items-center h-14 w-full text-white lg:h-16">
       
       <Link
         className="cursor-pointer flex place-items-center gap-2 p-4 text-sm font-bold lg:hidden"
@@ -76,7 +76,7 @@ const Navbar = () => {
       </div>
 
 
-    </div>
+    </nav>
   )
 }
 

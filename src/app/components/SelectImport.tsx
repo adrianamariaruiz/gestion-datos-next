@@ -29,7 +29,7 @@ const SelectImport = () => {
         <input 
           type="text" 
           placeholder="Importe (€)"
-          className="border-2 border-black rounded-md px-4 py-4 text-base focus:outline-none focus:border-primary-500 focus:ring-0 focus:ring-primary-500"
+          className="border border-black rounded-md px-4 py-4 text-base focus:outline-none focus:border-primary-500 focus:ring-0 focus:ring-primary-500"
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
         />
