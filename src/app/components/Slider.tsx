@@ -18,19 +18,29 @@ const Slider = () => {
 
   return (
 
-    <div className="relative w-full flex justify-center">
+    <div className="relative w-full flex justify-center items-end">
 
       {/* SLIDER */}
-      <div className="relative h-64 max-w-[600px] overflow-hidden rounded-lg">
-        {slides.map((slide, index) => (
-          <div
-            key={index}
-            className={`duration-700 ease-in-out ${index === currentSlide ? 'opacity-100' : 'opacity-0'} flex items-center justify-center`}
-            style={{ transition: 'opacity 0.7s' }}
-          >
-            <Image src={slide} width={300} height={300} alt={`Slide ${index}`} className="w-full max-w-[500px] h-64" />
-          </div>
-        ))}
+      <div className="relative w-full h-64 max-w-[600px] rounded-lg bg-black overflow-hidden">
+        <div
+          className="w-full h-full flex transition-transform duration-700 ease-in-out"
+          style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+        >
+          {slides.map((slide, index) => (
+            <div
+              key={index}
+              className="w-full h-full flex-shrink-0 flex items-center justify-center"
+            >
+              <Image
+                src={slide}
+                width={600}
+                height={300}
+                alt={`Slide ${index}`}
+                className="w-full h-full object-fill"
+              />
+            </div>
+          ))}
+        </div>
       </div>
 
       <div className="absolute z-30 flex items-center -translate-x-1/2 bottom-5 left-1/2 gap-2">
@@ -46,17 +56,25 @@ const Slider = () => {
       </div>
 
       <button onClick={prevSlide} type="button" className="hidden absolute top-0 left-0 z-50 md:flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none">
-        <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50">
-          <svg className="w-4 h-4 text-black" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 1 1 5l4 4"/>
-          </svg>
+        <span className="inline-flex items-center justify-center p-3 rounded border shadow border-[#CCCCCC] bg-white">
+        <Image
+            src={'/images/icons/Chevron-left.png'}
+            width={24}
+            height={24}
+            alt='chevron-right'
+            className="w-6 h6"
+          />
         </span>
       </button>
       <button onClick={nextSlide} type="button" className="hidden absolute top-0 right-0 z-50 md:flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none">
-        <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50">
-          <svg className="w-4 h-4 text-black" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 9 4-4-4-4"/>
-          </svg>
+        <span className="inline-flex items-center justify-center p-3 rounded border shadow border-[#CCCCCC] bg-white">
+          <Image
+            src={'/images/icons/Chevron-right.png'}
+            width={24}
+            height={24}
+            alt='chevron-right'
+            className="w-6 h6"
+          />
         </span>
       </button>
 
