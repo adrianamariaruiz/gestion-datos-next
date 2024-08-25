@@ -21,7 +21,10 @@ const Footer = () => {
       {/* Mobile */}
       <div className="h-full flex items-center justify-around lg:hidden">
 
-        <div className="flex flex-col items-center text-sm">
+        <Link 
+          href='/'
+          className="flex flex-col items-center text-sm"
+        >
           <Image
             src="/images/icons/Home16px.png"
             alt="back-arrow"
@@ -30,8 +33,10 @@ const Footer = () => {
             className="h-6 w-6"
           />
           <p>Inicio</p>
-        </div>
-        <div className="flex flex-col items-center text-sm">
+        </Link>
+       
+       
+        <Link href='/' className="flex flex-col items-center text-sm">
           <Image
             src="/images/icons/Results16px.png"
             alt="back-arrow"
@@ -40,8 +45,8 @@ const Footer = () => {
             className="h-6 w-6"
           />
           <p>Resultados</p>
-        </div>
-        <div className="flex flex-col items-center text-sm">
+        </Link>
+        <Link href='/' className="flex flex-col items-center text-sm">
           <Image
             src="/images/icons/Questiongrey16px.png"
             alt="back-arrow"
@@ -50,11 +55,12 @@ const Footer = () => {
             className="h-6 w-6"
           />
           <p>Ayuda</p>
-        </div>
+        </Link>
       </div>
 
       {/* Desktop */}
       <div className="hidden h-auto w-full p-8 lg:grid grid-cols-4 grid-rows-1 gap-8 justify-between bg-black text-white">
+        {/* 1 */}
         <section className="flex flex-col p-6 justify-center">
           <Image
             src="/images/Logo.png"
@@ -91,9 +97,6 @@ const Footer = () => {
             <Link href='/' className="underline">Lotería Sorteo Especial</Link>
             <Link href='/' className="underline">Lotería Jueves y Sábado</Link>
           </div>
-          
-
-          
         </section>
 
         {/* 3 */}
@@ -179,7 +182,6 @@ const Footer = () => {
             </Link>
             </div>
           </div>
-
         </section>
       </div>
     </footer>

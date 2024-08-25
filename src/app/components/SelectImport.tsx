@@ -10,7 +10,6 @@ const SelectImport = () => {
   const optionsImport = [5, 10, 20, 50]
 
   const handleButtonClick = (opt: number) => {
-    console.log('funciona', opt)
     setSelectedImport(opt);
     setInputValue(opt.toString())
   }
@@ -18,8 +17,6 @@ const SelectImport = () => {
   const handleSubmit = () => {
     console.log('funciona')
   }
-
-  console.log(inputValue)
 
   return (
     <div className="p-4 mt-4">
@@ -60,5 +57,3 @@ const SelectImport = () => {
 }
 
 export default SelectImport
-// #00A9E0
-// bg-[#cceef9]

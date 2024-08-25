@@ -26,25 +26,4 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  /* background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb)); */
-  font-family: fontMontserrat;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
-
-.bg-logo {
-  background-size: 85%;
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-image: url('/images/slider/Logo.svg');
-  
 }

@@ -12,13 +12,11 @@ const PaymentMethod = () => {
   const router = useRouter();
 
   const handleRadioChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    console.log(e.target.id)
     setSelect(e.target.id)
   }
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    console.log(select)
     router.push('/results')
   }
 

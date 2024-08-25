@@ -1,4 +1,3 @@
-import { Montserrat } from "next/font/google";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -24,9 +23,6 @@ const config: Config = {
         'secondary': {
           300: 'var(--secondary-desabled)'
         }
-      },
-      fontFamily: {
-        'fontMontserrat': ['Montserrat', 'sans-serif']
       },
       boxShadow: {
         'top': '0px -8px 15px -15px rgba(0,0,0,0.2)'
