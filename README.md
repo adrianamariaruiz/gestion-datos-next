@@ -1,8 +1,6 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Gestión de datos
 
-## Getting Started
-
-First, run the development server:
+Comandos para correr la aplicación en local:
 
 ```bash
 npm run dev
@@ -14,23 +12,36 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Imagenes de la app
+<div>
+  <img width="auto" height="500" src="./public/images/readme/home_mobile.png" alt="mobile-image"/>
+</div>
+<div>
+  <img width="400" height="auto" src="./public/images/readme/home1__1024.png" alt="tablet-image"/>
+  <img width="400" height="auto" src="./public/images/readme/home2__1024.png" alt="desktop-image"/>
+</div>
+<div>
+  <img width="auto" height="500" src="./public/images/readme/saldo_mobile.png" alt="modal-image"/>
+</div>
+<div>
+  <img width="400" height="auto" src="./public/images/readme/saldo1__1024.png" alt="modal-image"/>
+  <img width="400" height="auto" src="./public/images/readme/saldo2__1024.png" alt="modal-image"/>
+</div>
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Proyecto
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+El proyecto fue realizado con Next.js y los estilos con TailwindCSS.
+La app tiene el Layout.tsx donde está configurada la fuente a usar en todo el proyecto, también se importa el Componente Footer para que sea visualizado en todas las páginas de la app.
 
-## Learn More
+Cuenta en el momento con 4 paginas: el home, premios, provider-screen(se muestra cuando se realiza la transaccion - la recarga) y resultados.
 
-To learn more about Next.js, take a look at the following resources:
+Tiene componentes reutilizables para implementarlos en las diferentes páginas.
+Todas las imagenes las tomé del figma para que sean iguales al diseño.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+En algunos componentes cree array de objetos para recorrerlo y no hacer mas código repetido del necesario.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+En el global.css cree unas variables de colores para usar en toda la app, en Tailwind.config.ts se da estructura para poderlos usar solo con los nombres, así cuando se requiera cambiar un color solo se cambia en el global.css y se reflejará en toda la app.
 
-## Deploy on Vercel
+La app no está 100% funcional ya que está mas enfocada al uso de TailwindCSS y que quedara lo más parecida posible al diseño solicitado.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
