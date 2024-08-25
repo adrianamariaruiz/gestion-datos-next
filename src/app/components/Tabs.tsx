@@ -8,7 +8,9 @@ const Tabs = () => {
   const pathname = usePathname();
 
   return (
-    <div className="flex items-center justify-between h-10 w-full">
+    <>
+    <h1 className="hidden lg:flex font-bold text-2xl pb-4">Gestión de Saldo</h1>
+    <div className="flex items-center justify-between h-10 w-full lg:w-1/2">
       <Link 
         href='/' 
         className={
@@ -26,6 +28,8 @@ const Tabs = () => {
         Retirar Premios
       </Link>
     </div>
+    
+    </>
   )
 }
 

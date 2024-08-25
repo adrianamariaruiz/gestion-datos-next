@@ -129,16 +129,16 @@ const PaymentMethod = () => {
             </div>
           </div>
 
-          <div className="flex flex-col my-6 gap-4">
+          <div className="flex flex-col lg:items-center my-6 gap-4 lg:flex-row-reverse">
             <Button
-              className={`${select.length === 0  ? "bg-primary-100 text-black" : "bg-primary-500 text-white"}`}
+              className={`${select.length === 0  ? "bg-primary-100 text-black" : "bg-primary-500 text-white"} lg:w-1/2`}
               disabled={select.length === 0}
               type="submit"
             >
               Recargar Cuenta
             </Button>
             
-            <div className="flex text-xs gap-4">
+            <div className="flex items-center text-xs gap-4">
               <Image
                   alt="question-icon"
                   src="/images/icons/Security24px.png"
