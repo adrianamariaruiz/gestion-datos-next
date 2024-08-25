@@ -37,16 +37,16 @@ const Sidebar = () => {
   ];
 
   return (
-    <aside className="w-full h-32 flex flex-col items-center gap-4 px-2">
+    <aside className="w-full h-32 flex flex-col items-center gap-4">
       {/* primera card */}
       <section className="bg-white w-full flex flex-col items-center justify-between rounded-lg p-4 gap-6 shadow-md">
         <div className="w-full flex justify-between items-center font-bold">
           <h2>Hilla Amanda</h2>
-          <Button className="bg-yellow-500 h-6 w-fit text-xs flex items-center">Saldo: 10,00 €</Button>
+          <Button className="bg-yellow-500 h-6 max-w-fit text-xs flex items-center">Saldo: 10,00 €</Button>
         </div>
         <div className="w-full flex justify-between gap-4">
-          <Button className="text-sm border border-black py-2 px-6 hover:text-white">Retirar Premios</Button>
-          <Button className="text-sm py-2 px-6 bg-primary-500 text-white">Recargar Saldo</Button>
+          <Button className="text-sm border border-black py-2 px-2 hover:text-white xl:px-6">Retirar Premios</Button>
+          <Button className="text-sm py-2 px-2 bg-primary-500 text-white xl:px-6">Recargar Saldo</Button>
         </div>
       </section>
 
@@ -59,7 +59,7 @@ const Sidebar = () => {
               {data.items.map((item) => (
                 <Link key={item.id} className="flex gap-2 items-center pl-2 hover:text-primary-500" href="/">
                   <span>
-                    <Image src={item.icon} alt={item.info} width={16} height={16} />
+                    <Image src={item.icon} alt={item.info} width={16} height={16}/>
                   </span> 
                   {item.info}
                 </Link>
@@ -69,7 +69,7 @@ const Sidebar = () => {
         }
 
         <section className="w-full flex justify-center">
-          <Link href='/' className="underline flex gap-2">
+          <Link href='/' className="underline flex gap-2 hover:text-primary-500">
             <span><Image src='/images/sidebar/Logout.png' alt='Logout' width={16} height={16} /></span>
             Cerrar Sesión
           </Link>
